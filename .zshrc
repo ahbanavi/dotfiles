@@ -112,3 +112,7 @@ alias swinet='/home/yedoost/scripts/switch_interface_ssh.sh'
 alias dl='axel -acn32'
 alias pw='pwgen -1 -cnysB 24  | xclip -selection clipboard'
 alias dtf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias rsy='rsync -avzh --progress --stats'
+alias xclip='xclip -selection c'
+export WIN_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
