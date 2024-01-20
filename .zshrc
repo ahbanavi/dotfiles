@@ -116,3 +116,4 @@ alias rsy='rsync -avzh --progress --stats'
 alias xclip='xclip -selection c'
 export WIN_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+export GPG_TTY=$(tty)
