@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source .env
+source ~/.env
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
@@ -118,10 +118,11 @@ alias rsy='rsync -avzh --progress --stats'
 alias xclip='xclip -selection c'
 export WIN_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias rr='/home/yedoost/scripts/retry_command.sh'
 export GPG_TTY=$(tty)
 
 function gist_v2ray_update() {
   ~/scripts/v2ray_ip_replace.sh $1 > ~/w/gist.github.com/ahbanavi/proxies/proxies;
   gh gist edit $V2RAY_GIST -f proxies ~/w/gist.github.com/ahbanavi/proxies/proxies;
 }
-
+ 
