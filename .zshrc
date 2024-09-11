@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PATH=/home/yedoost/.config/composer/vendor/bin:$PATH
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo)
+plugins=(git sudo golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,3 +128,5 @@ function gist_v2ray_update() {
   gh gist edit $V2RAY_GIST -f proxies ~/w/gist.github.com/ahbanavi/proxies/proxies;
 }
  
+alias tb="nc termbin.com 9999"
+alias tbc="netcat termbin.com 9999 | xclip -selection c"
